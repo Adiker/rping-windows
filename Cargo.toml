@@ -5,10 +5,6 @@ edition = "2024"
 description = "Linux-style ping port for Windows, written in Rust"
 authors = ["adiker"]
 
-[[bin]]
-name = "rping"
-path = "main.rs"
-
 [dependencies]
 windows-sys = { version = "0.52", features = [
     "Win32_Foundation",
