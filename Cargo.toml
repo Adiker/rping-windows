@@ -1,9 +1,9 @@
 [package]
 name = "rping"
 version = "1.0.0"
-edition = "2021"
+edition = "2024"
 description = "Linux-style ping port for Windows, written in Rust"
-authors = ["rping"]
+authors = ["adiker"]
 
 [[bin]]
 name = "rping"
