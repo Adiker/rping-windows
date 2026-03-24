@@ -1,0 +1,27 @@
+[package]
+name = "rping"
+version = "1.0.0"
+edition = "2021"
+description = "Linux-style ping port for Windows, written in Rust"
+authors = ["rping"]
+
+[[bin]]
+name = "rping"
+path = "main.rs"
+
+[dependencies]
+windows-sys = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_NetworkManagement_IpHelper",
+    "Win32_Networking_WinSock",
+    "Win32_System_IO",
+] }
+ctrlc = "3.4"
+
+[target.'cfg(not(target_os = "windows"))'.dependencies]
+
+[profile.release]
+opt-level = 3
+strip = true
+lto = true
+codegen-units = 1
